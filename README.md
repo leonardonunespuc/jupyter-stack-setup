@@ -19,16 +19,10 @@ Main itens included in the Stack:
 - [Apache Toree](https://toree.apache.org/)
 
 
-## Setup
+## Start Stack
 
 1. `git clone` this project from GitHub
 2. Start Stack: `./start`
-5. Install package so Python can interect with PostgreSQL:
-```
-docker exec -it \
-$(docker ps | grep _pyspark | awk '{print $NF}') \
-pip install psycopg2-binary
-  ```
 
 ## Access Jupyter UI
 - Go to [http://localhost:8888/](http://localhost:8888/)
@@ -43,11 +37,6 @@ python ./02_bakery_dataframes.py
 $SPARK_HOME/bin/spark-submit 02_bakery_dataframes.py
 ```
 
-Load PostgreSQL with some data
-```shell
-python ./03_load_sql.py
-```
-
 Open Adminer at [http://localhost:8080/](http://localhost:8080/) to access PostgreSQL
 
 - System: `PostgreSQL`
@@ -59,10 +48,14 @@ Open Adminer at [http://localhost:8080/](http://localhost:8080/) to access Postg
 ## Running Jupyter Notebooks
 At the home screen click on `notebooks` folder
 
-Open `01_pyspark_demo_notebook.ipynb` or `02_pyspark_demo_notebook.ipynb`
-
+- Open `01_pyspark_demo_notebook.ipynb`
+- Open `02_pyspark_demo_notebook.ipynb`
 - To run a line of the notebook press Control + Enter
 
+## Stop Stack
+```
+./stop
+```
 
 ## Misc
 https://www.kaggle.com/datasets
