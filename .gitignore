@@ -1,6 +1,8 @@
 .DS_Store
 pg-data
 
+.jupyter/migrated
+
 work/notebooks/.ipynb_checkpoints
 work/notebooks/output
 work/notebooks/spark-warehouse
