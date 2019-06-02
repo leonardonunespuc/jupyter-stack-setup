@@ -19,10 +19,6 @@ services:
       NB_USER: $USER
       NB_GROUP: staff
     user: root
-    deploy:
-     replicas: 1
-     restart_policy:
-       condition: on-failure
     volumes:
     - ./work:/home/$USER/work
     - ./.jupyter:/home/$USER/.jupyter
@@ -37,19 +33,13 @@ services:
     networks:
     - pyspark-net
     volumes:
-    - ./tmp/pg-data:/var/lib/postgresql/data
-    deploy:
-     restart_policy:
-       condition: on-failure
+    - ./pg-data:/var/lib/postgresql/data
   adminer:
     image: adminer:latest
     ports:
     - "8080:8080/tcp"
     networks:
     - pyspark-net
-    deploy:
-     restart_policy:
-       condition: on-failure
 
 networks:
   pyspark-net:

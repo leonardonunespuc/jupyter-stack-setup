@@ -22,9 +22,7 @@ Main itens included in the Stack:
 ## Setup
 
 1. `git clone` this project from GitHub
-2. Initialize Docker Swarm: `docker swarm init`
-3. Deploy Stack: `docker stack deploy -c stack.yml jupyter-stack`
-4. Confirm Stack is running: `docker stack ps jupyter-stack`
+2. Start Stack: `./start`
 5. Install package so Python can interect with PostgreSQL:
 ```
 docker exec -it \
@@ -64,11 +62,6 @@ At the home screen click on `notebooks` folder
 Open `01_pyspark_demo_notebook.ipynb` or `02_pyspark_demo_notebook.ipynb`
 
 - To run a line of the notebook press Control + Enter
-
-## Remove Stack
-```
-docker stack rm jupyter-stack
-```
 
 
 ## Misc
