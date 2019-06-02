@@ -10,18 +10,18 @@ services:
     - "4040:4040/tcp"
     networks:
     - pyspark-net
-    working_dir: /home/$USER/work
+    working_dir: /home/jovyan/work
     environment:
       CHOWN_HOME: "yes"
       GRANT_SUDO: "yes"
       NB_UID: 1000
       NB_GID: 100
-      NB_USER: $USER
+      NB_USER: jovyan
       NB_GROUP: staff
     user: root
     volumes:
-    - ./work:/home/$USER/work
-    - ./.jupyter:/home/$USER/.jupyter
+    - ./work:/home/jovyan/work
+    - ./.jupyter:/home/jovyan/.jupyter
   postgres:
     image: postgres:10.5
     environment:
