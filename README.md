@@ -50,7 +50,8 @@ At the home screen click on `notebooks` folder
 
 - Open `01_pyspark_demo_notebook.ipynb`
 - Open `02_pyspark_demo_notebook.ipynb`
-- To run a line of the notebook press Control + Enter
+- Control + Enter run a line
+- Shift + Enter run a line and select next line
 
 ## Stop Stack
 ```
